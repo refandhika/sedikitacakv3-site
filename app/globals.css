@@ -47,6 +47,7 @@ body {
   height: 20px;
   background: black;
   animation: blink 0.75s step-end infinite;
+  z-index: 1;
 }
 
 @keyframes blink {

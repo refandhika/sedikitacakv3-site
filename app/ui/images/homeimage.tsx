@@ -1,17 +1,25 @@
 "use client"
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const HomeMainImage = () => {
+    const pathname = usePathname();
     const [loading, setLoading] = useState(true);
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+    
+    useEffect(() => {
+        if (isFirstLoad) {
+            const timer = setTimeout(() => {
+                setLoading(false);
+            }, 3000);
 
-	useEffect(() => {
-        const timer = setTimeout(() => {
+            setIsFirstLoad(false)
+            return () => clearTimeout(timer);
+        } else {
             setLoading(false);
-        }, 3000);
-
-        return () => clearTimeout(timer);
-	}, []);
+        }
+	}, [isFirstLoad, pathname]);
 
     return (
         <div className={`${loading ? "opacity-0" : "opacity-1" } w-full lg:w-1/3 transition-all duration-500`}>

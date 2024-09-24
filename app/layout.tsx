@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import SplashScreen from "@/app/ui/splashscreen";
+import NavLinks from "@/app/ui/navlinks";
 import CustomCursorAnimation from "@/app/ui/customcursor";
 
 const elType = localFont({
@@ -38,6 +40,10 @@ export default function RootLayout({
       <body
         className={`${elType.className} antialiased`}
       >
+        <SplashScreen />
+        <header>
+          <NavLinks />
+        </header>
         {children}
         <CustomCursorAnimation />
       </body>

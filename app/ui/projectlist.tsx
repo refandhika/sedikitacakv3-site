@@ -31,10 +31,10 @@ const ProjectList = () => {
                 <div key={project.id} className="py-4 px-0 scale-100 hover:px-4 hover:shadow-xl hover:border hover:border-gray-900 hover:scale-110 lg:w-fit transition-all">
                     <h2 className="text-2xl font-bold">{project.title}</h2>
                     <div className="text-xl">{project.content}</div>
-                    <div className="my-2">
+                    <div className="my-2 flex flex-wrap gap-1">
                     {project.techs?.map((tech: any) => {
                       return (
-                        <div key={tech.id}>
+                        <div key={tech.id} className="w-fit">
                           <img 
                             className="w-[35px] h-[35px] object-contain grayscale"
                             src={process.env.NEXT_PUBLIC_API_URL + tech.icon}

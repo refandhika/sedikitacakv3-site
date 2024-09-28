@@ -23,12 +23,9 @@ const TypeItHomeText = () => {
             <TypeIt
                 as={"div"}
                 options={{
-                    speed: 25,
+                    speed: 1,
                     startDelay: delay,
-                    html: true,
-                    afterComplete: (instance: any) => {
-                    instance.destroy()	
-                    }
+                    html: true
                 }}>
                 <h1 id="main-name" className="text-3xl font-extrabold mb-2">Refa Andhika Ryzarda Henesh</h1>
                 <h2 id="main-title" className="text-2xl font-extrabold mb-4">Full Stack Software Developer</h2>

@@ -7,7 +7,7 @@ const HomeMainImage = () => {
     const pathname = usePathname();
     const [loading, setLoading] = useState(true);
     const [isFirstLoad, setIsFirstLoad] = useState(true);
-    
+
     useEffect(() => {
         if (isFirstLoad) {
             const timer = setTimeout(() => {
@@ -22,9 +22,9 @@ const HomeMainImage = () => {
 	}, [isFirstLoad, pathname]);
 
     return (
-        <div className={`${loading ? "opacity-0" : "opacity-1" } w-full lg:w-1/3 transition-all duration-500`}>
+        <div className={`${loading ? "opacity-0" : "opacity-1" } w-full lg:w-1/3 flex justify-center items-center transition-all duration-500`}>
             <img
-                src="https://api.sedikitacak.com/assets/IMG-20240429-WA0012.jpg"
+                src={`${process.env.NEXT_PUBLIC_API_URL}/assets/IMG-20240429-WA0012.jpg`}
                 height={350}
                 width={350}
                 alt="refa profile"

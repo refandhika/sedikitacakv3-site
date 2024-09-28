@@ -7,8 +7,6 @@ My personal website made with Next.js using [SedikitAcakV3-API](https://github.c
 ---
 
 To Do:
-- Add index posts page
-- Add single post page
-- Add projects page
-- Add hobbies page
-- Add contact page
+- Connect contact form
+- Dockerize project
+- Add more animation

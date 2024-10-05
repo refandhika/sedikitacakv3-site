@@ -53,16 +53,16 @@ const PostDetail = ({ slug }: { slug: string }) => {
 	}, [slug]);
 
     return (
-      <div>
-          <h1 className="text-4xl font-bold">{article.title}</h1>
-          <div className="text-2xl">{article.subtitle}</div>
+      <div className="flex flex-col gap-4 lg:gap-6">
+          <h1 className="text-4xl lg:text-6xl font-bold">{article.title}</h1>
+          <div className="text-2xl lg:text-4xl">{article.subtitle}</div>
           <div className="flex flex-row gap-4">
-            <div className="text-xl">{article.created_at}</div>
+            <div className="text-xl lg:text-2xl">{article.created_at}</div>
             <span>---</span>
-            <div className="text-xl">{article.category.name}</div>
+            <div className="text-xl lg:text-2xl">{article.category.name}</div>
           </div>
-          <div className="text-lg my-4" dangerouslySetInnerHTML={{ __html: article.content }}></div>
-          <div className="text-lg font-bold">
+          <div className="text-lg lg:text-xl my-4" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+          <div className="text-lg lg:text-xl font-bold">
             {tags?.map((tag: any) => (
               <div className="px-2 border border-gray-500 w-fit" key={tag.id}>{tag}</div>
             ))}

@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const HomeMainImage = () => {
     const pathname = usePathname();
@@ -23,7 +24,7 @@ const HomeMainImage = () => {
 
     return (
         <div className={`${loading ? "opacity-0" : "opacity-1" } w-full lg:w-1/3 flex justify-center items-center transition-all duration-500`}>
-            <img
+            <Image
                 src={`${process.env.NEXT_PUBLIC_API_URL}/assets/IMG-20240429-WA0012.jpg`}
                 height={350}
                 width={350}

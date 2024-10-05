@@ -20,7 +20,7 @@ interface DataCategory {
 }
 
 const PostDetail = ({ slug }: { slug: string }) => {
-    const [loading, setLoading] = useState(true);
+    //const [loading, setLoading] = useState(true);
     const [article, setArticle] = useState<DataPost>({
       title: '',
       slug: '',
@@ -45,12 +45,12 @@ const PostDetail = ({ slug }: { slug: string }) => {
           } catch (err) {
             console.error('Failed to fetch article:', err);
           } finally {
-            setLoading(false);
+            //setLoading(false);
           }
         }
     
         fetchData();
-	}, []);
+	}, [slug]);
 
     return (
       <div>
@@ -64,7 +64,7 @@ const PostDetail = ({ slug }: { slug: string }) => {
           <div className="text-lg my-4" dangerouslySetInnerHTML={{ __html: article.content }}></div>
           <div className="text-lg font-bold">
             {tags?.map((tag: any) => (
-              <div className="px-2 border border-gray-500 w-fit">{tag}</div>
+              <div className="px-2 border border-gray-500 w-fit" key={tag.id}>{tag}</div>
             ))}
           </div>
       </div>

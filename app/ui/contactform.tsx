@@ -25,7 +25,7 @@ const ContactForm = () => {
         email: false,
         content: false
     })
-    const [loading, setLoading] = useState(false);
+    //const [loading, setLoading] = useState(false);
     const [notification, setNotification] = useState(false);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
@@ -139,17 +139,17 @@ const ContactForm = () => {
         }
 
         if(isSafeData){
-            setLoading(true);
+            //setLoading(true);
             try {
-                const sendResponse = await sendContactMessage(formData);
+                await sendContactMessage(formData);
                 setNotification(true);
-                const timer = setTimeout(() =>{
+                setTimeout(() =>{
                     setNotification(false);
                 }, 3000);
             } catch (err) {
                 console.error('Failed to send contact mail:', err);
             } finally {
-                setLoading(false);
+                //setLoading(false);
             }
         } else {
             setErrors(newErrors);

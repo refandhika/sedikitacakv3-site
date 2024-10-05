@@ -25,7 +25,7 @@ const NavLinks = () => {
             });
             setIsFirstLoad(false)
         }
-	}, [isFirstLoad, pathname]);
+	}, [isFirstLoad, pathname, loading]);
 
     useEffect(() => {
         const handleScroll = () => {

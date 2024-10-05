@@ -1,12 +1,11 @@
 "use client"
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchProjectList } from "@/app/lib/fetch";
+import Image from "next/image";
 
 const ProjectList = () => {
-    const [loading, setLoading] = useState(true);
+    //const [loading, setLoading] = useState(true);
     const [projects, setProjects] = useState([]);
 
 	useEffect(() => {
@@ -17,7 +16,7 @@ const ProjectList = () => {
           } catch (err) {
             console.error('Failed to fetch projects:', err);
           } finally {
-            setLoading(false);
+            //setLoading(false);
           }
         }
     
@@ -35,7 +34,7 @@ const ProjectList = () => {
                     {project.techs?.map((tech: any) => {
                       return (
                         <div key={tech.id} className="w-fit">
-                          <img 
+                          <Image 
                             className="w-[35px] h-[35px] object-contain grayscale"
                             src={process.env.NEXT_PUBLIC_API_URL + tech.icon}
                             alt={tech.title}

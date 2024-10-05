@@ -17,7 +17,7 @@ const RickRoll = () => {
     return (
         <>
             <div className="flex flex-col lg:flex-row px-8 py-16 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full lg:w-[1000px] lg:h-auto items-center text-center text-xl lg:text-4xl">
-                Man don't be such a party pooper, i'm just a mere code slave. :(
+                Man don&apos;t be such a party pooper, i&apos;m just a mere code slave. :(
             </div>
         </>
     )

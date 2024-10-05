@@ -1,12 +1,11 @@
 "use client"
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchBlogList } from "@/app/lib/fetch";
 
 const ArticleList = () => {
-    const [loading, setLoading] = useState(true);
+    //const [loading, setLoading] = useState(true);
     const [articles, setArticles] = useState([]);
 
 	useEffect(() => {
@@ -17,7 +16,7 @@ const ArticleList = () => {
           } catch (err) {
             console.error('Failed to fetch articles:', err);
           } finally {
-            setLoading(false);
+            //setLoading(false);
           }
         }
     

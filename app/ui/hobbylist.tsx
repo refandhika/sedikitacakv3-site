@@ -24,12 +24,16 @@ const HobbyList = () => {
 
     return (
         <>
-            <div className="my-8">
-            {hobbies?.map((hobby: any) => (
-                <div key={hobby.id}>
-                    <img src={process.env.NEXT_PUBLIC_API_URL + hobby.image} />
-                    <h2 className="text-2xl font-bold">{hobby.title}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: hobby.content }}></div>
+            <div className="my-8 grid grid-cols-1">
+            {hobbies?.map((hobby: any, index: number) => (
+                <div className="py-4 flex flex-col lg:grid lg:grid-cols-2 gap-2 lg:gap-6" key={hobby.id}>
+                  <div className={`w-full ${index % 2 ? "order-1" : "order-2"}`}>
+                    <img className="w-full h-full" src={process.env.NEXT_PUBLIC_API_URL + hobby.image} />
+                  </div>
+                  <div className={`flex flex-col justify-center gap-2 ${index % 2 ? "order-2" : "order-1"}`}>
+                    <h2 className="text-2xl lg:text-4xl font-bold">{hobby.title}</h2>
+                    <div className="text-xl lg:text-2xl" dangerouslySetInnerHTML={{ __html: hobby.content }}></div>
+                  </div>
                 </div>
             ))}
             </div>

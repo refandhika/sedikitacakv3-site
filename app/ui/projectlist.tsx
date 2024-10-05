@@ -26,7 +26,7 @@ const ProjectList = () => {
 
     return (
         <>
-            <div className="my-8">
+            <div className="my-8 grid grid-cols-1 lg:grid-cols-3">
             {projects?.map((project: any) => (
                 <div key={project.id} className="py-4 px-0 scale-100 hover:px-4 hover:shadow-xl hover:border hover:border-gray-900 hover:scale-110 lg:w-fit transition-all">
                     <h2 className="text-2xl font-bold">{project.title}</h2>
@@ -45,9 +45,9 @@ const ProjectList = () => {
                     })}
                     </div>
                     <div className="my-2 flex flex-wrap gap-2">
-                      {project.source && <a className="text-xl px-2 py-1 border border-gray-500" target="_blank" href={project.source}>Source</a>}
-                      {project.site && <a className="text-xl px-2 py-1 border border-gray-500" target="_blank" href={project.site}>Site</a>}
-                      {project.demo && <a className="text-xl px-2 py-1 border border-gray-500" target="_blank" href={project.demo}>Demo</a>}
+                      {project.source && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.source}>Source</a>}
+                      {project.site && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.site}>Site</a>}
+                      {project.demo && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.demo}>Demo</a>}
                     </div>
                 </div>
             ))}

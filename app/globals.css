@@ -50,6 +50,11 @@ body {
   z-index: 1;
 }
 
+.desktop-divide>:nth-child(3n + 2) {
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;

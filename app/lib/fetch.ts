@@ -1,3 +1,10 @@
+interface FormDataContact {
+  subject: string;
+  name: string;
+  email: string;
+  content: string;
+}
+
 export async function fetchSettingByParam(param: string) {
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/pub/setting/${param}`, {
@@ -95,5 +102,26 @@ export async function fetchHobbyList(page: number = 1, limit: number = 20, searc
     return data;
   } catch (error) {
     console.error('Error fetching hobbies data from API:', error);
+  }
+}
+
+export async function sendContactMessage(formData: FormDataContact) {
+  try {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/pub/contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (!response.ok) {
+      console.error(`Failed to send contact data: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error sending contact from API:', error);
   }
 }

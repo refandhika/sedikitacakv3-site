@@ -27,7 +27,7 @@ const ProjectList = () => {
         <>
             <div className="my-8 grid grid-cols-1 lg:grid-cols-3">
             {projects?.map((project: any) => (
-                <div key={project.id} className="py-4 px-0 scale-100 hover:px-4 hover:shadow-xl hover:border hover:border-gray-900 hover:scale-110 lg:w-fit transition-all">
+                <div key={project.id} className="py-4 px-0 scale-100 hover:px-4 hover:shadow-xl hover:border hover:border-gray-900 hover:scale-110 hover:bg-[#FFDBB5] lg:w-fit transition-all">
                     <h2 className="text-2xl font-bold">{project.title}</h2>
                     <div className="text-xl">{project.content}</div>
                     <div className="my-2 flex flex-wrap gap-1">

@@ -37,7 +37,7 @@ const HobbyList = () => {
                   </div>
                   <div className={`flex flex-col justify-center gap-2 ${index % 2 ? "order-2" : "order-1"}`}>
                     <h2 className="text-2xl lg:text-4xl font-bold">{hobby.title}</h2>
-                    <div className="text-xl lg:text-2xl" dangerouslySetInnerHTML={{ __html: hobby.content }}></div>
+                    <div className="text-xl lg:text-2xl flex flex-col gap-4 rich-text" dangerouslySetInnerHTML={{ __html: hobby.content }}></div>
                   </div>
                 </div>
             ))}

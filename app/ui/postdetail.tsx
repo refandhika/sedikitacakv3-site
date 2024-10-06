@@ -61,7 +61,7 @@ const PostDetail = ({ slug }: { slug: string }) => {
             <span>---</span>
             <div className="text-xl lg:text-2xl">{article.category.name}</div>
           </div>
-          <div className="text-lg lg:text-xl my-4" dangerouslySetInnerHTML={{ __html: article.content }}></div>
+          <div className="text-lg lg:text-xl my-4 flex flex-col gap-4 rich-text" dangerouslySetInnerHTML={{ __html: article.content }}></div>
           <div className="text-lg lg:text-xl font-bold">
             {tags?.map((tag: any) => (
               <div className="px-2 border border-gray-500 w-fit" key={tag.id}>{tag}</div>

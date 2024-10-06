@@ -55,6 +55,11 @@ body {
   border-right: 4px solid black;
 }
 
+.rich-text ul {
+  list-style-type: disc;
+  margin-left: 16px;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;

@@ -29,7 +29,7 @@ const TypeItHomeText = () => {
                 }}>
                 <h1 id="main-name" className="text-3xl font-extrabold mb-2">Refa Andhika Ryzarda Henesh</h1>
                 <h2 id="main-title" className="text-2xl font-extrabold mb-4">Full Stack Software Developer</h2>
-                <p className="text-xl mb-4">I&apos;m Refa, a full time software developer. Currently residing in Cibinong, Bogor, Indonesia (just south of Jakarta). Professionally i work with multiple language, but mostly Javascript and PHP. For now occasionally Rust and Java.</p>
+                <p className="text-xl mb-4">I&apos;m Refa, a full time software developer. Currently residing in Cibinong, Bogor, Indonesia (just south of Jakarta). Professionally i work with multiple language, but mostly Javascript and PHP. For now occasionally Rust.</p>
                 <p className="text-xl mb-4">I worked across multiple company in Indonesia. The most well know for you might be just Shopee. Been a Full Stack since the beginning and always a full stack at heart.</p>
                 <p>PS: Be happy at least once a day!</p>
             </TypeIt>

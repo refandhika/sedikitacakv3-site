@@ -84,6 +84,10 @@ body {
   font-weight: 700;
   padding: 0.5rem 0;
 }
+.rich-text code {
+  padding: 0.25rem;
+  background-color: #f59e0b;
+}
 
 @keyframes blink {
   50% {

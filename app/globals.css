@@ -60,6 +60,30 @@ body {
   list-style-type: disc;
   margin-left: 16px;
 }
+.rich-text h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+.rich-text h3 {
+  font-size: 1.75rem;
+  line-height: 1.3;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+.rich-text h4 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+.rich-text h5 {
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
 
 @keyframes blink {
   50% {

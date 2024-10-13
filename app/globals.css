@@ -53,6 +53,7 @@ body {
 .desktop-divide>:nth-child(3n + 2) {
   border-left: 4px solid black;
   border-right: 4px solid black;
+  padding: 0.5rem 1rem;
 }
 
 .rich-text ul {

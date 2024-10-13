@@ -11,7 +11,7 @@ const ProjectList = () => {
 	useEffect(() => {
         const fetchData = async () => {
           try {
-            const fetchedData = await fetchProjectList(1, 20, true);
+            const fetchedData = await fetchProjectList(1, 100, true);
             setProjects(fetchedData);
           } catch (err) {
             console.error('Failed to fetch projects:', err);
@@ -37,6 +37,8 @@ const ProjectList = () => {
                           <Image 
                             className="w-[35px] h-[35px] object-contain grayscale"
                             src={process.env.NEXT_PUBLIC_API_URL + tech.icon}
+                            width={40}
+                            height={40}
                             alt={tech.title}
                           />
                         </div>
@@ -45,7 +47,7 @@ const ProjectList = () => {
                     </div>
                     <div className="my-2 flex flex-wrap gap-2">
                       {project.source && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.source}>Source</a>}
-                      {project.site && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.site}>Site</a>}
+                      {project.url && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.url}>Site</a>}
                       {project.demo && <a className="hoverable text-xl px-2 py-1 border border-gray-500 hover:bg-amber-500" target="_blank" href={project.demo}>Demo</a>}
                     </div>
                 </div>

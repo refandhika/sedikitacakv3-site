@@ -88,6 +88,14 @@ body {
   padding: 0.25rem;
   background-color: #f59e0b;
 }
+.rich-text pre {
+  padding: 1.5rem 3rem;
+  background-color: #f59e0b;
+}
+.rich-text pre code {
+  padding: 0;
+  background-color: transparent;
+}
 
 @keyframes blink {
   50% {
